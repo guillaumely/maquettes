@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nicolas Albi, plombier chauffagiste à Dijon</title>
+<meta name="description" content="Plombier chauffagiste à Dijon et en Côte-d'Or, de père en fils depuis plus de 20 ans : dépannage, entretien de chaudière gaz et fioul, installation sanitaire et chauffage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Besley:wght@800&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f4f4f2;
+    --ink: #1f2b4d;
+    --muted: #4f5870;
+    --accent: #f7941d;
+    --field-1: #0b1222;
+    --field-1-ink: #ffffff;
+    --field-2: #e3e1dc;
+    --paper: #ffffff;
+
+    --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+    --step-body: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+    --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+    --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+    --step-display: clamp(2.75rem, 1.6rem + 5vw, 5.5rem);
+
+    --margin: clamp(16px, 3vw, 32px);
+    --ease: cubic-bezier(.2, .7, .2, 1);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { padding-bottom: 84px; font-family: "Libre Franklin", system-ui, sans-serif; font-size: var(--step-body); line-height: 1.5; color: var(--ink); background: var(--field-2); }
+  h1, h2, h3 { font-family: Besley, Georgia, serif; font-weight: 800; letter-spacing: -0.02em; line-height: 0.95; }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; height: auto; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 var(--margin); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; background: var(--ink); color: #fff; font: 600 var(--step-body)/1 "Libre Franklin", sans-serif; text-decoration: none; border: 0; cursor: pointer; transition: transform .18s var(--ease), background-color .18s var(--ease); }
+  .btn:hover { background: #2c3c69; transform: translateY(-2px); }
+  .btn:active { transform: translateY(1px) scale(.98); }
+  .btn.light { background: #fff; color: var(--ink); }
+  .btn.light:hover { background: var(--surface); }
+
+  /* Bandeau maquette */
+  .demo { background: var(--accent); color: var(--field-1); font-size: var(--step-small); font-weight: 600; text-align: center; padding: 8px var(--margin); }
+
+  main { position: relative; z-index: 2; background: var(--bg); }
+
+  /* Hero : le bon d'intervention */
+  .hero { position: relative; background: var(--field-1); color: var(--field-1-ink); overflow: hidden; min-height: 92svh; }
+  .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; animation: drift 24s var(--ease) infinite alternate; }
+  @keyframes drift { from { transform: scale(1.04); } to { transform: scale(1.12) translate(-1.5%, 1%); } }
+  .topbar { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px var(--margin); }
+  .mark { font-family: Besley, serif; font-weight: 800; font-size: var(--step-lead); text-decoration: none; }
+  .links { display: none; gap: 28px; }
+  .links a { text-decoration: none; font-weight: 600; font-size: var(--step-small); }
+  .links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .topbar .btn { min-height: 44px; padding: 0 18px; font-size: var(--step-small); }
+
+  .card {
+    --notch: 22px;
+    position: relative; margin: 48px var(--margin) 0; background: var(--paper); color: var(--ink); container-type: inline-size;
+    padding: 48px 24px 72px; text-align: center;
+    clip-path: polygon(var(--notch) 0, calc(100% - var(--notch)) 0, 100% var(--notch), 100% 100%, 0 100%, 0 var(--notch));
+  }
+  .card .doc { font-size: var(--step-small); font-weight: 600; color: var(--muted); }
+  .card h1 { font-size: min(10.5cqi, 4.75rem); margin: 18px 0 20px; }
+  .card h1 span { display: block; white-space: nowrap; }
+  .card .lead { font-size: var(--step-lead); line-height: 1.35; max-width: 30ch; margin: 0 auto; }
+  .facts { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 16px; margin: 26px auto 30px; font-size: var(--step-small); font-weight: 600; }
+  .diamond { display: none; width: 10px; height: 10px; background: var(--accent); transform: rotate(45deg); }
+  .facts { flex-direction: column; gap: 6px; }
+  .card .btn { width: 100%; max-width: 420px; }
+  .card .call-note { margin-top: 14px; font-size: var(--step-small); color: var(--muted); }
+
+  /* Sections */
+  section { padding: clamp(72px, 9vw, 140px) 0; }
+  h2 { font-size: var(--step-head); }
+
+  /* Liste des soucis : la chose vivante */
+  .souci { display: grid; gap: 40px; }
+  .souci-head p { margin-top: 18px; max-width: 34ch; font-size: var(--step-lead); line-height: 1.35; }
+  .souci-plate { margin-top: 32px; background: var(--surface); padding: 20px; }
+  .souci-plate img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; mix-blend-mode: multiply; }
+  .souci-plate figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); }
+  .bars { display: grid; gap: 6px; }
+  .bars details { background: var(--surface); }
+  .bars summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; padding: 0 20px; font-weight: 600; cursor: pointer; transition: background-color .18s var(--ease); }
+  .bars summary::-webkit-details-marker { display: none; }
+  .bars summary:hover { background: var(--field-2); }
+  .bars summary .plus { font-family: Besley, serif; font-size: 28px; line-height: 1; transition: transform .25s var(--ease); }
+  .bars details[open] summary .plus { transform: rotate(45deg); }
+  .bars details[open] { background: var(--ink); color: #fff; }
+  .bars details[open] summary:hover { background: transparent; }
+  .panel { padding: 4px 20px 24px; }
+  .panel ul { padding-left: 20px; }
+  .autre { margin-top: 22px; }
+  .autre a { font-weight: 600; }
+  .panel li { margin: 6px 0; }
+  .panel .acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .panel .btn { min-height: 48px; font-size: var(--step-small); }
+
+  /* L'entretien, comme un ticket */
+  .entretien { background: var(--field-1); color: var(--field-1-ink); }
+  .entretien .grid { display: grid; gap: 40px; align-items: start; }
+  .entretien p.intro { margin-top: 20px; font-size: var(--step-lead); line-height: 1.35; max-width: 30ch; }
+  .entretien .plate { margin-top: 32px; background: var(--paper); padding: 16px; max-width: 360px; }
+  .entretien .plate img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
+  .entretien .plate figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--muted); }
+  .slip { background: var(--paper); color: var(--ink); padding: 32px 24px 56px; font-variant-numeric: tabular-nums;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 95% 100%, 90% calc(100% - 14px), 85% 100%, 80% calc(100% - 14px), 75% 100%, 70% calc(100% - 14px), 65% 100%, 60% calc(100% - 14px), 55% 100%, 50% calc(100% - 14px), 45% 100%, 40% calc(100% - 14px), 35% 100%, 30% calc(100% - 14px), 25% 100%, 20% calc(100% - 14px), 15% 100%, 10% calc(100% - 14px), 5% 100%, 0 calc(100% - 14px)); }
+  .slip h3 { font-size: var(--step-lead); margin-bottom: 6px; letter-spacing: -0.01em; }
+  .slip .sub { font-size: var(--step-small); color: var(--muted); margin-bottom: 20px; }
+  .slip .grp { font-weight: 600; margin-top: 26px; }
+  .row { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; }
+  .row .dots { flex: 1; border-bottom: 4px dotted #b9bdc9; transform: translateY(-4px); }
+  .row .v { font-weight: 600; white-space: nowrap; }
+  .total { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 30px -24px 0; padding: 14px 24px; background: var(--ink); color: var(--paper); font-weight: 600; }
+  .entretien .btn { margin-top: 28px; }
+
+  /* La lettre */
+  .lettre { background: var(--field-2); }
+  .sheet { position: relative; max-width: 680px; margin: 0 auto; background: var(--paper); padding: 48px 24px 0; }
+  .sheet h2 { font-size: var(--step-head); margin-bottom: 28px; }
+  .sheet .tipped { float: right; width: 38%; margin: 0 0 16px 20px; background: var(--surface); padding: 10px; transform: rotate(2deg); }
+  .sheet .tipped img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; mix-blend-mode: multiply; }
+  .sheet p { margin-bottom: 18px; }
+  .sheet mark { background: #ffe1b8; color: inherit; padding: 0 3px; }
+  .sign { clear: both; padding-top: 10px; font-style: italic; font-size: 22px; }
+  .sign small { display: block; font-style: normal; font-size: var(--step-small); color: var(--muted); }
+  .tear { margin: 32px -24px 0; padding: 22px 24px; background: var(--surface); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+    border-top: 5px dotted var(--field-2); }
+  .tear a.mail { font-weight: 600; word-break: break-all; }
+
+  /* Avis */
+  .avis { background: var(--ink); color: #fff; overflow: hidden; }
+  .avis .slips { display: grid; gap: 0; margin-top: 48px; }
+  .q { background: var(--paper); color: var(--ink); padding: 34px 26px; width: 86%; font-size: var(--step-lead); line-height: 1.35;
+    clip-path: polygon(0 10px, 6% 0, 12% 10px, 18% 0, 24% 10px, 30% 0, 36% 10px, 42% 0, 48% 10px, 54% 0, 60% 10px, 66% 0, 72% 10px, 78% 0, 84% 10px, 90% 0, 96% 10px, 100% 0, 100% calc(100% - 10px), 94% 100%, 88% calc(100% - 10px), 82% 100%, 76% calc(100% - 10px), 70% 100%, 64% calc(100% - 10px), 58% 100%, 52% calc(100% - 10px), 46% 100%, 40% calc(100% - 10px), 34% 100%, 28% calc(100% - 10px), 22% 100%, 16% calc(100% - 10px), 10% 100%, 4% calc(100% - 10px), 0 100%); }
+  .q .stars { font-size: var(--step-small); font-weight: 600; color: var(--muted); margin-bottom: 10px; }
+  .q cite { display: block; margin-top: 14px; font-style: normal; font-size: var(--step-small); color: var(--muted); }
+  .q:nth-child(1) { transform: rotate(-2.5deg); }
+  .q:nth-child(2) { transform: rotate(2deg); justify-self: end; margin-top: -24px; }
+  .q:nth-child(3) { transform: rotate(-1.5deg); margin-top: -24px; }
+
+  /* Coupon de devis */
+  .devis-wrap { display: grid; gap: 28px; }
+  .devis-photo img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
+  .devis-photo figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--muted); }
+  .coupon { position: relative; background: var(--ink); color: #fff; display: grid; }
+  .coupon .left { padding: 32px 24px; border-bottom: 5px dotted var(--bg); }
+  .coupon h2 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.25rem); }
+  .coupon .left p { margin-top: 16px; max-width: 32ch; }
+  .coupon form { padding: 28px 24px 32px; display: grid; gap: 10px; }
+  .coupon input, .coupon select, .coupon textarea { width: 100%; min-height: 54px; padding: 14px 16px; border: 0; background: #34416a; color: #fff; font: 400 var(--step-body)/1.3 "Libre Franklin", sans-serif; }
+  .coupon textarea { min-height: 110px; resize: vertical; }
+  .coupon ::placeholder { color: #c7cde0; }
+  .coupon button { min-height: 56px; background: var(--accent); color: var(--field-1); }
+  .coupon button:hover { background: #ffa83d; }
+  .coupon .or { font-size: var(--step-small); color: #c7cde0; }
+  .coupon .or a { color: #fff; font-weight: 600; }
+
+  /* Pied de page : le dos de la carte, révélé par le rideau */
+  footer { background: var(--field-2); padding: 64px 0 120px; }
+  .back { position: relative; background: var(--paper); padding: 56px 24px 32px; display: grid; gap: 28px;
+    clip-path: polygon(0.00% 12px, 4.17% 0px, 8.33% 12px, 12.50% 0px, 16.67% 12px, 20.83% 0px, 25.00% 12px, 29.17% 0px, 33.33% 12px, 37.50% 0px, 41.67% 12px, 45.83% 0px, 50.00% 12px, 54.17% 0px, 58.33% 12px, 62.50% 0px, 66.67% 12px, 70.83% 0px, 75.00% 12px, 79.17% 0px, 83.33% 12px, 87.50% 0px, 91.67% 12px, 95.83% 0px, 100.00% 12px, 100% 100%, 0 100%); }
+  .back .bye { font-family: Besley, serif; font-weight: 800; font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem); line-height: 1; }
+  .back p { margin-top: 12px; max-width: 34ch; }
+  .addr { display: grid; gap: 10px; font-size: var(--step-lead); }
+  .addr a { font-weight: 600; text-decoration: none; }
+  .addr a:hover { text-decoration: underline; }
+  .stamp { position: absolute; top: 28px; right: 20px; width: 72px; background: var(--paper); padding: 5px; transform: rotate(4deg); outline: 2px dotted var(--field-2); outline-offset: -1px; }
+  .stamp img { aspect-ratio: 3 / 4; object-fit: cover; }
+  .imprint { grid-column: 1 / -1; font-size: var(--step-small); color: var(--muted); }
+  .imprint a { color: var(--muted); }
+
+  /* Barre d'appel fixe sur téléphone */
+  .callbar { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: var(--field-1); }
+  .callbar { transition: transform .3s var(--ease); }
+  .callbar.away { transform: translateY(110%); }
+  .callbar .btn { flex: 1; background: var(--accent); color: var(--field-1); }
+  .callbar .btn.sms { flex: 0 0 auto; background: var(--paper); color: var(--ink); }
+
+  /* Apparitions */
+  .reveal > * { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+  .reveal.in > * { opacity: 1; transform: none; }
+  .reveal.in > *:nth-child(2) { transition-delay: .08s; }
+  .reveal.in > *:nth-child(3) { transition-delay: .16s; }
+  .reveal.in > *:nth-child(4) { transition-delay: .24s; }
+  .no-js .reveal > * { opacity: 1; transform: none; }
+  .card { animation: rise .9s var(--ease) both .1s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(40px); } }
+
+  @media (min-width: 760px) {
+    .links { display: flex; }
+    .diamond { display: block; }
+    .facts { flex-direction: row; gap: 10px 16px; }
+    .card { width: min(820px, 100%); margin: 56px auto 0; padding: 64px 56px 96px; --notch: 30px; }
+    .card .btn { width: auto; }
+    .slip { padding: 40px 36px 64px; }
+    .total { margin: 30px -36px 0; padding: 14px 36px; }
+    .sheet { padding: 64px 60px 0; }
+    .tear { margin: 40px -60px 0; padding: 22px 60px; }
+    .avis .slips { grid-template-columns: repeat(3, 1fr); gap: 0; align-items: start; }
+    .q { width: auto; }
+    .q:nth-child(1) { margin-right: -30px; }
+    .q:nth-child(2) { margin-top: 60px; z-index: 1; justify-self: stretch; }
+    .q:nth-child(3) { margin-left: -30px; margin-top: 20px; }
+    .devis-wrap { grid-template-columns: 1fr; }
+    .coupon { grid-template-columns: 46% 54%; }
+    .coupon .left { border-bottom: 0; border-right: 5px dotted var(--bg); padding: 48px; display: flex; flex-direction: column; justify-content: space-between; }
+    .coupon form { padding: 48px; }
+    .back { grid-template-columns: 1fr 1fr; padding: 72px 56px 32px; }
+    .stamp { width: 96px; top: 40px; right: 48px; }
+    footer { padding-bottom: 64px; }
+  }
+  @media (min-width: 1100px) {
+    .callbar { display: none; }
+    body { padding-bottom: 0; }
+    .souci { grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; }
+    .entretien .grid { grid-template-columns: 1fr 1fr; gap: 64px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal > * { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="no-js">
+
+<div class="demo">Maquette de démonstration proposée par Guillaume Lamy, développeur web à Dijon. Ce n'est pas le site officiel.</div>
+
+<main>
+  <header class="hero">
+    <img class="hero-photo" src="assets/dijon-stbenigne-toit.jpg" width="1920" height="1280" alt="Les tuiles vernissées de la cathédrale Saint-Bénigne, à Dijon">
+    <nav class="topbar" aria-label="Navigation principale">
+      <a class="mark" href="#">Nicolas Albi</a>
+      <div class="links">
+        <a href="#soucis">Dépannage</a>
+        <a href="#entretien">Entretien</a>
+        <a href="#avis">Avis</a>
+        <a href="#devis">Devis</a>
+      </div>
+      <a class="btn light" href="tel:+33695965420">Appeler</a>
+    </nav>
+
+    <div class="card">
+      <p class="doc">Plomberie · Chauffage · Entretien · Installation</p>
+      <h1><span>Nicolas Albi,</span> <span>plombier à Dijon</span></h1>
+      <p class="lead">Artisan de père en fils depuis plus de 20 ans. Une fuite, une chaudière en panne, une salle de bains à installer : j'interviens chez vous.</p>
+      <div class="facts" aria-label="En bref">
+        <span>Dijon et toute la Côte-d'Or</span><span class="diamond" aria-hidden="true"></span>
+        <span>Chaudières gaz et fioul</span><span class="diamond" aria-hidden="true"></span>
+        <span>Un seul interlocuteur</span>
+      </div>
+      <a class="btn" href="tel:+33695965420">Appeler le 06 95 96 54 20</a>
+      <p class="call-note">Ou décrivez votre souci juste en dessous, je vous rappelle.</p>
+    </div>
+  </header>
+
+  <section id="soucis">
+    <div class="wrap souci">
+      <div class="souci-head reveal">
+        <h2>Quel est votre souci&nbsp;?</h2>
+        <p>Choisissez, voyez ce que je fais pour le régler, et envoyez-moi un SMS déjà rédigé.</p>
+        <figure class="souci-plate">
+          <img src="assets/catalogue-of-brass-goods-and-plumbing-specialties.jpg" width="1920" height="2911" loading="lazy" alt="Page d'un catalogue de robinetterie en laiton de 1893">
+          <figcaption>Robinets d'arrêt, catalogue de 1893.</figcaption>
+        </figure>
+      </div>
+
+      <div class="bars reveal" id="bars">
+        <details open data-souci="une fuite d'eau">
+          <summary>Fuite d'eau <span class="plus" aria-hidden="true">+</span></summary>
+          <div class="panel">
+            <ul><li>Recherche de la fuite</li><li>Réparation sur acier, cuivre, PVC ou tuyaux souples</li><li>Débouchage de tuyauterie</li></ul>
+            <div class="acts"><a class="btn light" href="sms:+33695965420">Écrire un SMS</a><a class="btn light" href="tel:+33695965420">Appeler</a></div>
+          </div>
+        </details>
+        <details data-souci="plus d'eau chaude">
+          <summary>Plus d'eau chaude <span class="plus" aria-hidden="true">+</span></summary>
+          <div class="panel">
+            <ul><li>Réparation de ballon d'eau chaude</li><li>Diagnostic de la chaudière si elle produit votre eau chaude</li></ul>
+            <div class="acts"><a class="btn light" href="sms:+33695965420">Écrire un SMS</a><a class="btn light" href="tel:+33695965420">Appeler</a></div>
+          </div>
+        </details>
+        <details data-souci="une chaudière en panne">
+          <summary>Chaudière en panne <span class="plus" aria-hidden="true">+</span></summary>
+          <div class="panel">
+            <ul><li>Dépannage de chaudières gaz et fioul, murales ou au sol</li><li>Diagnostic et remplacement des pièces nécessaires</li></ul>
+            <div class="acts"><a class="btn light" href="sms:+33695965420">Écrire un SMS</a><a class="btn light" href="tel:+33695965420">Appeler</a></div>
+          </div>
+        </details>
+        <details data-souci="des WC bouchés ou un sanibroyeur en panne">
+          <summary>WC bouché ou sanibroyeur <span class="plus" aria-hidden="true">+</span></summary>
+          <div class="panel">
+            <ul><li>Dépannage de WC et de sanibroyeur</li><li>Débouchage</li></ul>
+            <div class="acts"><a class="btn light" href="sms:+33695965420">Écrire un SMS</a><a class="btn light" href="tel:+33695965420">Appeler</a></div>
+          </div>
+        </details>
+        <details data-souci="un robinet ou un mitigeur à changer">
+          <summary>Robinet ou mitigeur à changer <span class="plus" aria-hidden="true">+</span></summary>
+          <div class="panel">
+            <ul><li>Remplacement de robinets et mitigeurs</li><li>Adoucisseurs d'eau, sèche-serviettes</li></ul>
+            <div class="acts"><a class="btn light" href="sms:+33695965420">Écrire un SMS</a><a class="btn light" href="tel:+33695965420">Appeler</a></div>
+          </div>
+        </details>
+        <details data-souci="l'entretien annuel de ma chaudière">
+          <summary>Entretien annuel de chaudière <span class="plus" aria-hidden="true">+</span></summary>
+          <div class="panel">
+            <ul><li>Nettoyage, points de contrôle, analyse du monoxyde de carbone</li><li>Attestation d'entretien remise à la fin</li></ul>
+            <div class="acts"><a class="btn light" href="sms:+33695965420">Écrire un SMS</a><a class="btn light" href="tel:+33695965420">Appeler</a></div>
+          </div>
+        </details>
+        <details data-souci="un projet d'installation (salle de bains, chaudière ou radiateurs)">
+          <summary>Installation ou rénovation <span class="plus" aria-hidden="true">+</span></summary>
+          <div class="panel">
+            <ul><li>WC, baignoire, douche, meuble vasque, évier</li><li>Chaudières à condensation et basse température, gaz et fioul</li><li>Radiateurs, chauffage central, plancher chauffant</li><li>Tuyauterie gaz, avec certificat de conformité</li></ul>
+            <div class="acts"><a class="btn light" href="sms:+33695965420">Écrire un SMS</a><a class="btn light" href="tel:+33695965420">Appeler</a></div>
+          </div>
+        </details>
+        <p class="autre">Pas dans la liste&nbsp;? Appelez-moi au <a href="tel:+33695965420">06 95 96 54 20</a>, on en parle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="entretien" id="entretien">
+    <div class="wrap grid">
+      <div class="reveal">
+        <h2>L'entretien, ligne par ligne</h2>
+        <p class="intro">Il est obligatoire chaque année, et c'est lui qui évite la panne en plein mois de janvier. Voici ce que je fais à chaque visite.</p>
+        <a class="btn light" href="sms:+33695965420?&body=Bonjour%2C%20je%20voudrais%20un%20rendez-vous%20pour%20l'entretien%20de%20ma%20chaudi%C3%A8re.">Prendre rendez-vous par SMS</a>
+        <figure class="plate">
+          <img src="assets/outils-anciens-de-plombier-au-xviiie-siecle.jpg" width="1523" height="2247" loading="lazy" alt="Planche de l'Encyclopédie de Diderot montrant des outils de plombier du XVIIIe siècle">
+          <figcaption>Outils de plombier, Encyclopédie de Diderot et d'Alembert.</figcaption>
+        </figure>
+      </div>
+
+      <div class="slip reveal" role="table" aria-label="Déroulé de l'entretien">
+        <div>
+          <h3>Visite d'entretien</h3>
+          <p class="sub">Chaudières murales et au sol, gaz ou fioul</p>
+          <p class="grp">Sur la chaudière</p>
+          <div class="row" role="row"><span role="cell">Nettoyage complet</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">fait</span></div>
+          <div class="row" role="row"><span role="cell">Points de contrôle</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">vérifiés</span></div>
+          <p class="grp">Sécurité</p>
+          <div class="row" role="row"><span role="cell">Monoxyde de carbone</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">&lt; 10 ppm</span></div>
+          <div class="row" role="row"><span role="cell">Étanchéité gaz</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">contrôlée</span></div>
+          <p class="grp">En partant</p>
+          <div class="row" role="row"><span role="cell">Pièces à prévoir</span><span class="dots" aria-hidden="true"></span><span class="v" role="cell">expliquées</span></div>
+          <div class="total"><span>Attestation remise</span><span>1 fois par an</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lettre" aria-labelledby="lettre-titre">
+    <div class="wrap">
+      <article class="sheet reveal">
+        <h2 id="lettre-titre">De père en fils</h2>
+        <figure class="tipped">
+          <img src="assets/habit-de-plombier-g-5089.jpg" width="1920" height="2617" loading="lazy" alt="Gravure ancienne : l'habit de plombier, un artisan portant ses outils">
+        </figure>
+        <p>Bonjour,</p>
+        <p>Je suis plombier chauffagiste, comme mon père avant moi. <mark>Plus de 20 ans de métier</mark>, et toujours la même façon de travailler : comprendre le problème, l'expliquer simplement, et le régler proprement.</p>
+        <p>Quand vous m'appelez, c'est moi qui réponds et c'est moi qui viens. Pas de standard, pas de sous-traitant : vous savez à qui vous avez affaire du devis à la fin du chantier.</p>
+        <p>Je travaille à Dijon et dans toute la Côte-d'Or, sur la plomberie, le chauffage, le gaz et l'entretien des chaudières.</p>
+        <p class="sign">Nicolas Albi<small>Plombier chauffagiste</small></p>
+        <div class="tear">
+          <a class="mail" href="mailto:albi.nicolas81@gmail.com">albi.nicolas81@gmail.com</a>
+          <a class="btn" href="tel:+33695965420">06 95 96 54 20</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="avis" id="avis">
+    <div class="wrap">
+      <h2 class="reveal">Ce qu'en disent mes clients</h2>
+      <div class="slips reveal">
+        <blockquote class="q"><div class="stars">Note : 5 sur 5</div>Globalement très satisfaite de l'intervention de Monsieur Albi. Plombier réactif, travail soigné et coût correct.<cite>Avis client</cite></blockquote>
+        <blockquote class="q"><div class="stars">Note : 5 sur 5</div>Plombier très professionnel, qui propose un délai d'intervention raisonnable. Je le recommande.<cite>Avis client</cite></blockquote>
+        <blockquote class="q"><div class="stars">Note : 5 sur 5</div>Bravo, continuez ainsi ! Je suis très satisfait de l'intervention !<cite>Avis client</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="devis">
+    <div class="wrap devis-wrap">
+      <figure class="devis-photo reveal">
+        <img src="assets/dijon-rue-de-la-chouette.jpg" width="1920" height="1293" loading="lazy" alt="La rue de la Chouette, dans le centre historique de Dijon">
+      </figure>
+      <div class="coupon reveal">
+        <div class="left">
+          <h2>Demander un devis</h2>
+          <p>Décrivez votre besoin en deux lignes. Je vous rappelle pour en parler et fixer un passage.</p>
+        </div>
+        <form id="form" action="mailto:albi.nicolas81@gmail.com" method="post" enctype="text/plain">
+          <label class="sr" for="nom">Votre nom</label><input id="nom" name="nom" placeholder="Votre nom" autocomplete="name" required>
+          <label class="sr" for="tel">Votre téléphone</label><input id="tel" name="tel" type="tel" placeholder="Votre téléphone" autocomplete="tel" required>
+          <label class="sr" for="ville">Votre commune</label><input id="ville" name="ville" placeholder="Votre commune" autocomplete="address-level2">
+          <label class="sr" for="besoin">Votre besoin</label><textarea id="besoin" name="besoin" placeholder="Votre besoin (fuite, chaudière, salle de bains…)"></textarea>
+          <button class="btn" type="submit">Envoyer ma demande</button>
+          <p class="or">Plus rapide : <a href="tel:+33695965420">appelez le 06 95 96 54 20</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="back">
+      <figure class="stamp"><img src="assets/rg-dijon-100-dijon-vue-generale.jpg" width="1628" height="1018" loading="lazy" alt="Carte postale ancienne : vue générale de Dijon"></figure>
+      <div>
+        <p class="bye">À bientôt chez vous</p>
+        <p>Nicolas Albi, plombier chauffagiste. Dépannage, entretien et installation, à Dijon et dans toute la Côte-d'Or.</p>
+      </div>
+      <div class="addr">
+        <a href="tel:+33695965420">06 95 96 54 20</a>
+        <a href="sms:+33695965420">Envoyer un SMS</a>
+        <a href="mailto:albi.nicolas81@gmail.com">albi.nicolas81@gmail.com</a>
+        <span>Dijon et Côte-d'Or (21)</span>
+      </div>
+      <p class="imprint">Maquette non officielle réalisée par Guillaume Lamy. Images : <a href="https://commons.wikimedia.org/wiki/File:Dijon-StBenigne-toit.jpg">« Dijon-StBenigne-toit »</a> par Morburre, CC BY-SA 3.0 ; <a href="https://commons.wikimedia.org/wiki/File:Catalogue_of_brass_goods_and_plumbing_specialties_(1893)_(14780890374).jpg">catalogue H.A. Williams Mfg. Co., 1893</a>, sans restriction connue ; <a href="https://commons.wikimedia.org/wiki/File:Outils_anciens_de_plombier_au_XVIIIe_si%C3%A8cle_et_corde_%C3%A0_n%C5%93uds.jpg">outils de plombier, Encyclopédie de Diderot et d'Alembert</a>, CC BY-SA 4.0 ; <a href="https://commons.wikimedia.org/wiki/File:Habit_de_Plombier._G.5089.jpg">« Habit de Plombier »</a> par Gérard Valck, CC0 ; <a href="https://commons.wikimedia.org/wiki/File:Dijon_-_rue_de_la_Chouette.jpg">« Dijon - rue de la Chouette »</a> par Eusebius, CC BY 3.0 ; <a href="https://commons.wikimedia.org/wiki/File:RG_DIJON_100_-_DIJON_-_Vue_g%C3%A9n%C3%A9rale.JPG">carte postale RG Dijon n°100</a>, domaine public ; via Wikimedia Commons.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+33695965420">Appeler maintenant</a>
+  <a class="btn sms" href="sms:+33695965420">SMS</a>
+</div>
+
+<script>
+  document.body.classList.remove('no-js');
+  const tel = '+33695965420';
+  const smsLink = body => 'sms:' + tel + '?&body=' + encodeURIComponent(body);
+
+  // Chaque souci prépare son propre SMS.
+  document.querySelectorAll('#bars details').forEach(d => {
+    const body = "Bonjour, j'ai " + d.dataset.souci + '. Pouvez-vous me rappeler ? Je suis à : ';
+    d.querySelectorAll('a[href^="sms:"]').forEach(a => a.href = smsLink(body));
+    d.addEventListener('toggle', () => {
+      if (d.open) document.querySelectorAll('#bars details').forEach(o => { if (o !== d) o.open = false; });
+    });
+  });
+
+  // Le coupon ouvre un email déjà rempli.
+  document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const body = `Nom : ${f.get('nom')}\nTéléphone : ${f.get('tel')}\nCommune : ${f.get('ville')}\n\n${f.get('besoin')}`;
+    location.href = 'mailto:albi.nicolas81@gmail.com?subject=' + encodeURIComponent('Demande de devis') + '&body=' + encodeURIComponent(body);
+  });
+
+  // Apparition des sections.
+  const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // La barre d'appel s'efface quand le pied de page, qui a les mêmes contacts, est visible.
+  const bar = document.querySelector('.callbar');
+  new IntersectionObserver(([e]) => bar.classList.toggle('away', e.isIntersecting)).observe(document.querySelector('footer'));
+</script>
+</body>
+</html>
