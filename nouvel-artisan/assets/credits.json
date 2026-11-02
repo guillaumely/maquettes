@@ -1,0 +1,50 @@
+[
+ {
+  "file": "assets/dijon-place-liberation.jpg",
+  "media": "image",
+  "ref": "commons:176285405",
+  "title": "Dijon - Place de la Libération - 2",
+  "creator": "Benjamin Smith",
+  "creatorUrl": null,
+  "date": "2025-08-06",
+  "license": "CC BY-SA 4.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/wiki/File:Dijon_-_Place_de_la_Lib%C3%A9ration_-_2.jpg",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Dijon_-_Place_de_la_Lib%C3%A9ration_-_2.jpg/1920px-Dijon_-_Place_de_la_Lib%C3%A9ration_-_2.jpg",
+  "width": 1920,
+  "height": 1080,
+  "bytes": 549893,
+  "credit": "\"Dijon - Place de la Libération - 2\" by Benjamin Smith, CC BY-SA 4.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-11-02T11:27:04.586Z"
+ },
+ {
+  "file": "assets/toits-dijonnais.jpg",
+  "media": "image",
+  "ref": "commons:67868035",
+  "title": "Toits-dijonnais",
+  "creator": "Twibo2",
+  "creatorUrl": null,
+  "date": "2017-10-28",
+  "license": "CC BY-SA 4.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/wiki/File:Toits-dijonnais.jpg",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Toits-dijonnais.jpg/1920px-Toits-dijonnais.jpg",
+  "width": 1920,
+  "height": 908,
+  "bytes": 530876,
+  "credit": "\"Toits-dijonnais\" by Twibo2, CC BY-SA 4.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-11-02T11:27:29.817Z"
+ }
+]
