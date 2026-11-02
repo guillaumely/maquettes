@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Couverture d'hier et d'aujourd'hui, couvreur à Dijon</title>
+<meta name="description" content="Entreprise familiale de couverture, zinguerie et charpente à Dijon depuis 2004. Qualibat RGE : TVA à 5,5 %, MaPrimeRénov', Éco-PTZ. Devis gratuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #efedea;
+    --slate: #23282d;
+    --slate-2: #353c43;
+    --ink: #1c2024;
+    --muted: #59616a;
+    --tile: #b4502e;
+    --tile-2: #c96543;
+    --on-slate: #ffffff;
+
+    --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+    --step-body: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+    --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
+    --step-head: clamp(2.6rem, 1.6rem + 4.2vw, 5.5rem);
+
+    --margin: clamp(16px, 4vw, 56px);
+    --ease: cubic-bezier(.2, .7, .2, 1);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { padding-bottom: 84px; font-family: Barlow, system-ui, sans-serif; font-size: var(--step-body); line-height: 1.55; color: var(--ink); background: var(--bg); }
+  h1, h2, h3 { font-family: "Barlow Condensed", system-ui, sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.92; }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; height: auto; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 var(--margin); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  :focus-visible { outline: 3px solid var(--tile); outline-offset: 3px; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 0 26px; background: var(--tile); color: #fff; font: 600 var(--step-body)/1 "Barlow", sans-serif; text-decoration: none; border: 0; cursor: pointer; transition: background-color .18s var(--ease), transform .18s var(--ease); }
+  .btn:hover { background: var(--tile-2); transform: translateY(-2px); }
+  .btn:active { transform: translateY(1px) scale(.98); }
+  .btn.line { background: transparent; color: inherit; border: 2px solid currentColor; }
+  .btn.line:hover { background: rgba(255,255,255,.1); }
+
+  .demo { background: var(--tile); color: #fff; font-size: var(--step-small); text-align: center; padding: 8px var(--margin); }
+
+  /* Accueil : le toit en grand */
+  .hero { position: relative; min-height: 90svh; display: flex; flex-direction: column; justify-content: space-between; color: var(--on-slate); background: var(--slate); overflow: hidden; }
+  .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: rgba(20, 24, 28, .55); }
+  .hero > :not(img) { position: relative; z-index: 1; }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px var(--margin); }
+  .mark { font-family: "Barlow Condensed", sans-serif; font-weight: 800; text-transform: uppercase; font-size: 1.25rem; line-height: 1; text-decoration: none; }
+  .mark small { display: block; font-weight: 600; font-size: .8rem; letter-spacing: .08em; color: #e7c2b4; }
+  .links { display: none; gap: 28px; font-weight: 600; font-size: var(--step-small); }
+  .links a { text-decoration: none; }
+  .links a:hover { text-decoration: underline; text-underline-offset: 5px; }
+  .topbar .btn { min-height: 44px; padding: 0 16px; font-size: var(--step-small); }
+  .hero-text { padding: 0 var(--margin) 56px; max-width: 1100px; }
+  .hero h1 { font-size: clamp(3.25rem, 1.6rem + 7vw, 8rem); }
+  .hero h1 span { color: #f0a283; }
+  .hero .lead { margin-top: 22px; font-size: var(--step-lead); line-height: 1.35; max-width: 34ch; }
+  .hero .acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+  /* Bandeau des atouts */
+  .strip { background: var(--slate); color: #fff; }
+  .strip ul { list-style: none; padding: 18px var(--margin); margin: 0 auto; max-width: 1320px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+  .strip b { display: block; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 1.9rem; line-height: 1; text-transform: uppercase; color: #f0a283; }
+  .strip span { font-size: var(--step-small); color: #c8ccd0; }
+
+  section { padding: clamp(72px, 9vw, 136px) 0; }
+  h2 { font-size: var(--step-head); }
+  .intro { margin-top: 18px; font-size: var(--step-lead); line-height: 1.35; max-width: 36ch; color: var(--muted); }
+
+  /* Réalisations filtrables */
+  .head-row { display: grid; gap: 24px; align-items: end; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filters button { min-height: 46px; padding: 0 18px; border: 2px solid var(--slate); background: transparent; color: var(--slate); font: 600 var(--step-small)/1 Barlow, sans-serif; cursor: pointer; transition: background-color .18s var(--ease), color .18s var(--ease); }
+  .filters button[aria-pressed="true"], .filters button:hover { background: var(--slate); color: #fff; }
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 36px; }
+  .gallery figure { position: relative; overflow: hidden; background: var(--surface); }
+  .gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s var(--ease); }
+  .gallery figure:hover img { transform: scale(1.04); }
+  .gallery figcaption { position: absolute; left: 0; bottom: 0; padding: 6px 10px; background: var(--slate); color: #fff; font-size: var(--step-small); }
+  .gallery figure[hidden] { display: none; }
+  .gallery .wide { grid-column: span 2; }
+  .gallery .wide img { aspect-ratio: 16 / 9; }
+
+  /* Métiers */
+  .metiers { background: var(--surface); }
+  .m-grid { display: grid; gap: 0; margin-top: 44px; border-top: 3px solid var(--slate); }
+  .m-grid div { padding: 26px 0; border-bottom: 1px solid #cfcac3; }
+  .m-grid h3 { font-size: clamp(1.9rem, 1.4rem + 1.4vw, 2.6rem); }
+  .m-grid h3 i { font-style: normal; color: var(--tile); margin-right: 10px; }
+  .m-grid p { margin-top: 10px; color: var(--muted); max-width: 40ch; }
+
+  /* Aides RGE */
+  .aides { background: var(--tile); color: #fff; }
+  .aides-grid { display: grid; gap: 40px; }
+  .aides .intro { color: #fbe3d9; }
+  .aides ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .aides li { background: rgba(0,0,0,.14); padding: 22px 18px; }
+  .aides li b { display: block; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: clamp(2rem, 1.5rem + 1.6vw, 3rem); line-height: 1; text-transform: uppercase; }
+  .aides li span { display: block; margin-top: 8px; font-size: var(--step-small); color: #fbe3d9; }
+  .aides .btn { background: var(--slate); margin-top: 28px; }
+  .aides .btn:hover { background: var(--slate-2); }
+
+  /* Famille : la frise */
+  .famille-grid { display: grid; gap: 40px; align-items: center; }
+  .famille figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .famille figcaption { margin-top: 8px; font-size: var(--step-small); color: var(--muted); }
+  .frise { list-style: none; padding: 0; margin-top: 36px; border-left: 4px solid var(--tile); }
+  .frise li { padding: 0 0 26px 22px; }
+  .frise b { display: block; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 2.2rem; line-height: 1; color: var(--tile); }
+
+  /* Avis */
+  .avis { background: var(--slate); color: #fff; }
+  .avis-grid { display: grid; gap: 28px; margin-top: 44px; }
+  .avis blockquote { border-top: 3px solid #f0a283; padding-top: 20px; font-size: var(--step-lead); line-height: 1.35; }
+  .avis cite { display: block; margin-top: 14px; font-style: normal; font-size: var(--step-small); color: #c8ccd0; }
+
+  /* Devis */
+  .devis-grid { display: grid; gap: 40px; }
+  .devis form { display: grid; gap: 10px; }
+  .devis input, .devis select, .devis textarea { width: 100%; min-height: 56px; padding: 14px 16px; border: 2px solid #cfcac3; background: #fff; color: var(--ink); font: 400 var(--step-body)/1.3 Barlow, sans-serif; }
+  .devis input:focus, .devis select:focus, .devis textarea:focus { border-color: var(--slate); outline: none; }
+  .devis textarea { min-height: 120px; resize: vertical; }
+  .contacts { display: grid; gap: 4px; margin-top: 28px; }
+  .contacts a { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: clamp(2rem, 1.5rem + 1.8vw, 3.2rem); line-height: 1.05; text-decoration: none; }
+  .contacts a:hover { color: var(--tile); }
+  .contacts small { font-size: var(--step-small); color: var(--muted); }
+
+  footer { background: var(--ink); color: #c8ccd0; padding: 56px 0 120px; font-size: var(--step-small); }
+  .foot { display: grid; gap: 20px; }
+  .foot strong { font-family: "Barlow Condensed", sans-serif; font-size: 1.6rem; text-transform: uppercase; color: #fff; }
+  .foot a { color: #fff; }
+
+  .callbar { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: var(--slate); transition: transform .3s var(--ease); }
+  .callbar.away { transform: translateY(110%); }
+  .callbar .btn { flex: 1; }
+  .callbar .btn.line { flex: 0 0 auto; color: #fff; }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+  .reveal.in, .no-js .reveal { opacity: 1; transform: none; }
+
+  @media (min-width: 760px) {
+    .links { display: flex; }
+    .strip ul { grid-template-columns: repeat(4, 1fr); padding-top: 24px; padding-bottom: 24px; }
+    .gallery { grid-template-columns: repeat(3, 1fr); }
+    .m-grid { grid-template-columns: 1fr 1fr; column-gap: 48px; }
+    .aides ul { grid-template-columns: 1fr 1fr; }
+    .avis-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  }
+  @media (min-width: 1100px) {
+    .callbar { display: none; }
+    body { padding-bottom: 0; }
+    footer { padding-bottom: 56px; }
+    .head-row { grid-template-columns: 1fr auto; }
+    .gallery { grid-template-columns: repeat(4, 1fr); }
+    .aides-grid { grid-template-columns: 5fr 7fr; gap: 72px; align-items: center; }
+    .famille-grid { grid-template-columns: 7fr 5fr; gap: 72px; }
+    .devis-grid { grid-template-columns: 1fr 1fr; gap: 72px; }
+    .foot { grid-template-columns: 1fr 2fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="no-js">
+
+<div class="demo">Maquette de démonstration proposée par Guillaume Lamy, développeur web à Dijon. Ce n'est pas le site officiel.</div>
+
+<main>
+  <header class="hero">
+    <img src="photos/c50.jpg" width="1400" height="1050" alt="Toiture en ardoise et cheminée en brique, chantier de l'entreprise">
+    <nav class="topbar" aria-label="Navigation principale">
+      <a class="mark" href="#">Couverture d'hier<br>et d'aujourd'hui<small>Bordier · depuis 2004</small></a>
+      <div class="links">
+        <a href="#realisations">Réalisations</a>
+        <a href="#metiers">Métiers</a>
+        <a href="#aides">Aides RGE</a>
+        <a href="#devis">Devis</a>
+      </div>
+      <a class="btn" href="tel:+33380436120">03 80 43 61 20</a>
+    </nav>
+    <div class="hero-text">
+      <h1>Votre toit,<br><span>de père en fils.</span></h1>
+      <p class="lead">Couverture, zinguerie et charpente à Dijon et en Bourgogne. Une entreprise familiale certifiée Qualibat RGE.</p>
+      <div class="acts">
+        <a class="btn" href="#devis">Demander un devis gratuit</a>
+        <a class="btn line" href="#realisations">Voir nos chantiers</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="strip">
+    <ul>
+      <li><b>2004</b><span>Entreprise fondée à Dijon</span></li>
+      <li><b>RGE</b><span>Qualification Qualibat</span></li>
+      <li><b>5,5 %</b><span>TVA réduite sur l'isolation</span></li>
+      <li><b>0 €</b><span>Le devis, toujours</span></li>
+    </ul>
+  </div>
+
+  <section id="realisations">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div>
+          <h2>Nos chantiers</h2>
+          <p class="intro">Des toits refaits à Dijon et autour, en photos. Choisissez un type de travaux.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrer les chantiers">
+          <button aria-pressed="true" data-f="all">Tout</button>
+          <button aria-pressed="false" data-f="tuile">Tuiles</button>
+          <button aria-pressed="false" data-f="ardoise">Ardoise</button>
+          <button aria-pressed="false" data-f="zinc">Zinc, bac acier</button>
+          <button aria-pressed="false" data-f="charpente">Charpente, isolation</button>
+        </div>
+      </div>
+      <div class="gallery reveal">
+        <figure class="wide" data-c="tuile"><img src="photos/c7.jpg" width="1400" height="1050" loading="lazy" alt="Maison avec toiture en tuiles refaite et lucarnes"><figcaption>Tuiles et lucarnes</figcaption></figure>
+        <figure data-c="ardoise"><img src="photos/c45.jpg" width="1400" height="1050" loading="lazy" alt="Toiture en ardoise sur bâtiment en brique"><figcaption>Ardoise</figcaption></figure>
+        <figure data-c="ardoise"><img src="photos/c36.jpg" width="1400" height="1050" loading="lazy" alt="Chantier de toiture en ardoise sous échafaudage, autour d'un œil-de-bœuf"><figcaption>Rénovation en cours</figcaption></figure>
+        <figure data-c="tuile"><img src="photos/c20.jpg" width="1400" height="1050" loading="lazy" alt="Toiture en tuiles mécaniques avec fenêtres de toit"><figcaption>Tuiles mécaniques</figcaption></figure>
+        <figure data-c="zinc"><img src="photos/c61.jpg" width="1400" height="1050" loading="lazy" alt="Toiture en bac acier sur maison moderne"><figcaption>Bac acier</figcaption></figure>
+        <figure data-c="charpente"><img src="photos/c72.jpg" width="1400" height="1050" loading="lazy" alt="Charpente neuve en bois avant couverture"><figcaption>Charpente</figcaption></figure>
+        <figure data-c="tuile"><img src="photos/c38.jpg" width="1400" height="1050" loading="lazy" alt="Faîtage en tuiles anciennes sur un mur"><figcaption>Faîtage</figcaption></figure>
+        <figure data-c="ardoise"><img src="photos/c60.jpg" width="1400" height="1050" loading="lazy" alt="Lucarne et pan de toit en ardoise"><figcaption>Lucarne en ardoise</figcaption></figure>
+        <figure data-c="zinc"><img src="photos/c42.jpg" width="1400" height="1050" loading="lazy" alt="Grande toiture en bac acier gris"><figcaption>Joint debout</figcaption></figure>
+        <figure data-c="charpente"><img src="photos/c30.jpg" width="1400" height="1050" loading="lazy" alt="Isolation de combles sous la toiture"><figcaption>Isolation des combles</figcaption></figure>
+        <figure data-c="charpente"><img src="photos/c55.jpg" width="1400" height="1050" loading="lazy" alt="Pose d'isolant en laine minérale"><figcaption>Isolation</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="metiers" id="metiers">
+    <div class="wrap">
+      <h2 class="reveal">Quatre métiers,<br>une seule équipe</h2>
+      <div class="m-grid reveal">
+        <div><h3><i>01</i>Couverture</h3><p>Tuile plate, tuile mécanique, ardoise, lave : en neuf comme en rénovation, avec démoussage et entretien.</p></div>
+        <div><h3><i>02</i>Zinguerie</h3><p>Gouttières, chéneaux, corniches en aluminium de couleur, zinc et cuivre, joint debout et tasseau.</p></div>
+        <div><h3><i>03</i>Charpente</h3><p>Réparation, renforcement ou charpente neuve, et fenêtres de toit type Velux ou Roto.</p></div>
+        <div><h3><i>04</i>Isolation</h3><p>Combles, toiture et bardage des murs, avec ou sans isolation, en laine de verre, de roche ou ouate.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aides" id="aides">
+    <div class="wrap aides-grid">
+      <div class="reveal">
+        <h2>Isoler coûte moins cher avec nous</h2>
+        <p class="intro">Grâce à notre qualification Qualibat RGE, vos travaux d'isolation ouvrent droit aux aides de l'État. On vous explique lesquelles au moment du devis.</p>
+        <a class="btn" href="#devis">Savoir à quoi j'ai droit</a>
+      </div>
+      <ul class="reveal">
+        <li><b>TVA 5,5 %</b><span>au lieu de 20 % sur les travaux d'isolation</span></li>
+        <li><b>MaPrimeRénov'</b><span>l'aide de l'État pour la rénovation énergétique</span></li>
+        <li><b>Éco-PTZ</b><span>un prêt à taux zéro pour financer les travaux</span></li>
+        <li><b>Prime CEE</b><span>la prime énergie, avec notre partenaire</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="famille" id="famille">
+    <div class="wrap famille-grid">
+      <figure class="reveal">
+        <img src="photos/c5.jpg" width="1400" height="1050" loading="lazy" alt="Œil-de-bœuf restauré au milieu d'un chantier de toiture">
+        <figcaption>Restauration d'un œil-de-bœuf, sur l'un de nos chantiers.</figcaption>
+      </figure>
+      <div class="reveal">
+        <h2>D'hier et d'aujourd'hui</h2>
+        <p class="intro">Le nom de l'entreprise dit tout : les gestes d'hier, transmis à ceux d'aujourd'hui.</p>
+        <ol class="frise">
+          <li><b>2004</b>Didier Bordier fonde l'entreprise à Dijon.</li>
+          <li><b>2008</b>Formés au métier, ses fils s'associent avec lui.</li>
+          <li><b>Aujourd'hui</b>Le même respect des règles de l'art, avec la qualification RGE en plus.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="avis" id="avis">
+    <div class="wrap">
+      <h2 class="reveal">Ils nous ont confié leur toit</h2>
+      <div class="avis-grid reveal">
+        <blockquote>Le gérant est sympathique, délai respecté, prix intéressant et qualité du travail tout à fait correcte. Je recommande.<cite>Stéphane B., avis Google</cite></blockquote>
+        <blockquote>Excellente entreprise familiale d'artisans. Ils sont au top.<cite>Homecoach 21, avis Google</cite></blockquote>
+        <blockquote>Très professionnelle et travail parfait&nbsp;! Merci&nbsp;!<cite>Alexandre G., avis Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="devis" id="devis">
+    <div class="wrap devis-grid">
+      <div class="reveal">
+        <h2>Devis gratuit</h2>
+        <p class="intro">Une fuite, un toit à refaire, des combles à isoler&nbsp;? Appelez-nous, ou laissez votre demande : on vous rappelle.</p>
+        <div class="contacts">
+          <a href="tel:+33380436120">03 80 43 61 20</a>
+          <a href="tel:+33629665166">06 29 66 51 66</a>
+          <small>Dijon, agglomération et Bourgogne</small>
+        </div>
+      </div>
+      <form id="form" class="reveal">
+        <label class="sr" for="nom">Votre nom</label><input id="nom" name="nom" placeholder="Votre nom" autocomplete="name" required>
+        <label class="sr" for="tel">Votre téléphone</label><input id="tel" name="tel" type="tel" placeholder="Votre téléphone" autocomplete="tel" required>
+        <label class="sr" for="ville">Votre commune</label><input id="ville" name="ville" placeholder="Votre commune" autocomplete="address-level2">
+        <label class="sr" for="type">Type de travaux</label>
+        <select id="type" name="type"><option>Fuite ou réparation</option><option>Rénovation de toiture</option><option>Zinguerie, gouttières</option><option>Charpente, fenêtre de toit</option><option>Isolation (aides RGE)</option></select>
+        <label class="sr" for="besoin">Votre demande</label><textarea id="besoin" name="besoin" placeholder="Décrivez votre projet en deux lignes"></textarea>
+        <button class="btn" type="submit">Envoyer ma demande</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>Couverture d'hier et d'aujourd'hui</strong><br>Couverture, zinguerie, charpente, isolation. Dijon et Bourgogne.</div>
+    <div>Tél./fax <a href="tel:+33380436120">03 80 43 61 20</a> · Portable <a href="tel:+33629665166">06 29 66 51 66</a> · <a href="mailto:bapt.bordier@free.fr">bapt.bordier@free.fr</a><br>Maquette non officielle réalisée par Guillaume Lamy, avec les photos de chantier de l'entreprise.</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+33629665166">Appeler</a>
+  <a class="btn line" href="#devis">Devis</a>
+</div>
+
+<script>
+  document.body.classList.remove('no-js');
+
+  // Filtre des chantiers.
+  const btns = document.querySelectorAll('.filters button');
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.setAttribute('aria-pressed', x === b));
+    document.querySelectorAll('.gallery figure').forEach(f => f.hidden = b.dataset.f !== 'all' && f.dataset.c !== b.dataset.f);
+  }));
+
+  // Le formulaire ouvre un email déjà rempli.
+  document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const body = `Nom : ${f.get('nom')}\nTéléphone : ${f.get('tel')}\nCommune : ${f.get('ville')}\nTravaux : ${f.get('type')}\n\n${f.get('besoin')}`;
+    location.href = 'mailto:bapt.bordier@free.fr?subject=' + encodeURIComponent('Demande de devis : ' + f.get('type')) + '&body=' + encodeURIComponent(body);
+  });
+
+  const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: .1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const bar = document.querySelector('.callbar');
+  new IntersectionObserver(([e]) => bar.classList.toggle('away', e.isIntersecting)).observe(document.querySelector('footer'));
+</script>
+</body>
+</html>
