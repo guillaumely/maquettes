@@ -5,163 +5,202 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Le Nouvel Artisan, dépannage et rénovation à Dijon</title>
-<meta name="description" content="Thomas Boudiguet, artisan à Dijon : dépannage plomberie et électricité, rénovation de salle de bain et de cuisine, pose de cloisons. Devis gratuit.">
+<meta name="description" content="Thomas Boudiguet, artisan à Dijon : plomberie, électricité, rénovation de salle de bain et de cuisine. Devis gratuit, urgences prioritaires.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #ffffff;
-    --surface: #eef1ec;
-    --ink: #13281d;
-    --muted: #4a5a50;
-    --green: #17392a;
-    --green-2: #22513b;
-    --mustard: #e3b23c;
-    --on-green: #ffffff;
+    --paper: #f4f6f2;
+    --ink: #17222d;
+    --muted: #4d5966;
+    --slate: #1f3346;
+    --slate-2: #2c465e;
+    --leaf: #5f9a3a;
+    --leaf-2: #4c8230;
+    --leaf-pale: #e6f0dc;
+    --line: #d5dbd2;
 
-    --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
-    --step-body: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
-    --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
-    --step-head: clamp(2.25rem, 1.4rem + 3.6vw, 4.5rem);
+    --step-small: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+    --step-body: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+    --step-lead: clamp(1.1875rem, 1.05rem + 0.6vw, 1.5rem);
+    --step-head: clamp(2.1rem, 1.4rem + 3vw, 3.9rem);
 
-    --margin: clamp(16px, 4vw, 56px);
+    --margin: clamp(16px, 4.5vw, 64px);
     --ease: cubic-bezier(.2, .7, .2, 1);
   }
   * { box-sizing: border-box; margin: 0; }
   html { scroll-behavior: smooth; }
-  body { padding-bottom: 84px; font-family: Figtree, system-ui, sans-serif; font-size: var(--step-body); line-height: 1.55; color: var(--ink); background: var(--bg); }
-  h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; letter-spacing: -0.035em; line-height: 0.95; }
+  body { padding-bottom: 88px; font-family: Figtree, system-ui, sans-serif; font-size: var(--step-body); line-height: 1.55; color: var(--ink); background: var(--bg); overflow-x: hidden; }
+  h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
   a { color: inherit; }
   img { display: block; max-width: 100%; height: auto; }
-  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 var(--margin); }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 var(--margin); }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  :focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--leaf); outline-offset: 3px; }
 
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 999px; background: var(--mustard); color: var(--ink); font: 600 var(--step-body)/1 Figtree, sans-serif; text-decoration: none; border: 0; cursor: pointer; transition: transform .18s var(--ease), background-color .18s var(--ease); }
-  .btn:hover { background: #f0c45a; transform: translateY(-2px); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 24px; border-radius: 14px; background: var(--leaf); color: #fff; font: 700 var(--step-body)/1 Figtree, sans-serif; text-decoration: none; border: 0; cursor: pointer; transition: background-color .18s var(--ease), transform .18s var(--ease); }
+  .btn:hover { background: var(--leaf-2); transform: translateY(-2px); }
   .btn:active { transform: translateY(1px) scale(.98); }
-  .btn.ghost { background: transparent; color: inherit; box-shadow: inset 0 0 0 2px currentColor; }
-  .btn.ghost:hover { background: rgba(255,255,255,.08); }
-  .btn.dark { background: var(--green); color: var(--on-green); }
-  .btn.dark:hover { background: var(--green-2); }
+  .btn.ghost { background: #fff; color: var(--slate); box-shadow: inset 0 0 0 2px var(--line); }
+  .btn.ghost:hover { box-shadow: inset 0 0 0 2px var(--slate); }
+  .btn.dark { background: var(--slate); }
+  .btn.dark:hover { background: var(--slate-2); }
+  .btn svg { width: 20px; height: 20px; flex: none; }
 
-  .demo { background: var(--ink); color: #fff; font-size: var(--step-small); text-align: center; padding: 8px var(--margin); }
+  .demo { background: var(--slate); color: #dfe7ee; font-size: 13px; text-align: center; padding: 7px var(--margin); }
 
-  /* Accueil : bandeau vert + photo */
-  .hero { display: grid; background: var(--green); color: var(--on-green); }
-  .hero-photo { position: relative; min-height: 38svh; overflow: hidden; }
-  .hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 60%; }
-  .hero-photo .tag { position: absolute; left: var(--margin); bottom: 16px; background: var(--green); color: #fff; font-size: var(--step-small); padding: 6px 12px; border-radius: 999px; }
-  .hero-text { padding: 28px var(--margin) 48px; display: flex; flex-direction: column; }
-  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .mark { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 1.35rem; letter-spacing: -0.03em; text-decoration: none; }
-  .mark b { color: var(--mustard); }
-  .links { display: none; gap: 26px; font-size: var(--step-small); font-weight: 600; }
+  /* En-tête */
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px var(--margin); max-width: 1240px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand img { width: 52px; height: auto; border-radius: 8px; }
+  .brand b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; line-height: 1.05; }
+  .brand small { display: block; font-size: 13px; color: var(--muted); }
+  .links { display: none; gap: 26px; font-size: var(--step-small); font-weight: 700; }
   .links a { text-decoration: none; }
-  .links a:hover { color: var(--mustard); }
-  .hero h1 { font-size: clamp(3rem, 1.6rem + 6vw, 6.75rem); margin-top: 48px; }
-  .hero h1 em { font-style: normal; color: var(--mustard); }
-  .hero .lead { margin-top: 24px; font-size: var(--step-lead); line-height: 1.35; max-width: 28ch; }
-  .hero .acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-  .hero ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; font-size: var(--step-small); font-weight: 600; }
-  .hero li { padding: 6px 12px; border-radius: 999px; background: var(--green-2); }
+  .links a:hover { color: var(--leaf-2); }
+  .top .btn { min-height: 44px; padding: 0 16px; font-size: var(--step-small); border-radius: 12px; }
 
-  section { padding: clamp(72px, 9vw, 136px) 0; }
+  /* Accueil : la maison */
+  .hero { padding: 18px 0 64px; background: linear-gradient(var(--bg) 0, var(--bg) 40%, var(--paper) 40%); }
+  .hero-grid { display: grid; gap: 28px; }
+  .hero-grid > *, .moi-grid > *, .zone-grid > *, .devis-grid > * { min-width: 0; }
+  .brand { min-width: 0; }
+  .eyebrow-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .pill { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; background: var(--leaf-pale); color: var(--leaf-2); font-size: 14px; font-weight: 700; }
+  .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--leaf); }
+  .hero h1 { font-size: clamp(2.6rem, 1.5rem + 5vw, 5.4rem); }
+  .hero h1 em { font-style: normal; color: var(--leaf-2); }
+  .hero .lead { margin-top: 18px; font-size: var(--step-lead); line-height: 1.4; max-width: 30ch; color: var(--muted); }
+  .hero .acts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .hero .note { margin-top: 12px; font-size: var(--step-small); color: var(--muted); }
+
+  .house { background: #fff; border-radius: 22px; box-shadow: 0 1px 0 var(--line), 0 18px 40px -24px rgba(23,34,45,.35); padding: 18px; }
+  .house-h { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+  .house-h b { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.25rem; letter-spacing: -0.02em; }
+  .house-h span { font-size: 14px; color: var(--muted); }
+  .plan { width: 100%; height: auto; display: block; }
+  .plan .room rect { fill: var(--paper); stroke: var(--slate); stroke-width: 3; transition: fill .18s var(--ease); }
+  .plan .room text { font: 700 15px Figtree, sans-serif; fill: var(--slate); pointer-events: none; }
+  .plan .room text.sub { font: 500 12px Figtree, sans-serif; fill: var(--muted); }
+  .plan .room { cursor: pointer; outline: none; }
+  .plan .room:hover rect { fill: var(--leaf-pale); }
+  .plan .room:focus-visible rect { stroke: var(--leaf); stroke-width: 5; }
+  .plan .room[aria-pressed="true"] rect { fill: var(--leaf); }
+  .plan .room[aria-pressed="true"] text { fill: #fff; }
+  .plan .door { stroke: #fff; stroke-width: 6; }
+  .answer { margin-top: 14px; border-radius: 16px; background: var(--slate); color: #fff; padding: 18px; }
+  .answer .q { font-size: 14px; color: #b9c7d4; }
+  .answer h3 { margin-top: 4px; font-size: 1.45rem; letter-spacing: -0.02em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chip { min-height: 44px; padding: 0 14px; border-radius: 12px; border: 2px solid #4a6178; background: transparent; color: #fff; font: 600 15px Figtree, sans-serif; cursor: pointer; text-align: left; }
+  .chip[aria-pressed="true"] { background: #fff; color: var(--slate); border-color: #fff; }
+  .answer .acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .answer .btn { min-height: 50px; font-size: var(--step-small); }
+  .answer .btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 2px #4a6178; }
+
+  section { padding: clamp(64px, 8vw, 120px) 0; }
   h2 { font-size: var(--step-head); }
-  .kicker-lead { margin-top: 18px; font-size: var(--step-lead); line-height: 1.35; max-width: 34ch; color: var(--muted); }
+  .kicker { display: block; margin-bottom: 14px; font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--leaf-2); }
+  .intro { margin-top: 16px; font-size: var(--step-lead); line-height: 1.4; max-width: 38ch; color: var(--muted); }
 
-  /* Soucis : grille de tuiles */
-  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 40px; }
-  .tile { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; min-height: 120px; padding: 18px; border: 0; border-radius: 18px; background: var(--surface); color: var(--ink); text-align: left; font: 600 var(--step-body)/1.2 Figtree, sans-serif; cursor: pointer; transition: background-color .2s var(--ease), transform .2s var(--ease); }
-  .tile:hover { transform: translateY(-3px); }
-  .tile .n { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 1.75rem; color: var(--green-2); }
-  .tile[aria-pressed="true"] { background: var(--green); color: #fff; }
-  .tile[aria-pressed="true"] .n { color: var(--mustard); }
-  .answer { margin-top: 10px; border-radius: 18px; background: var(--mustard); padding: 26px 22px; }
-  .answer h3 { font-size: var(--step-lead); letter-spacing: -0.02em; }
-  .answer ul { margin-top: 12px; padding-left: 20px; }
-  .answer li { margin: 4px 0; }
-  .answer .acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-  .answer .btn { min-height: 48px; font-size: var(--step-small); }
-  .no-js .answer [data-for] { display: block !important; margin-bottom: 20px; }
-  .autre { margin-top: 22px; color: var(--muted); }
-  .autre a { color: var(--ink); font-weight: 600; }
+  /* Trois métiers */
+  .trades { display: grid; gap: 16px; margin-top: 44px; }
+  .trade { border-radius: 20px; overflow: hidden; background: var(--paper); display: grid; }
+  .trade img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+  .trade .body { padding: 22px; }
+  .trade h3 { font-size: 1.7rem; letter-spacing: -0.02em; }
+  .trade ul { margin-top: 12px; padding-left: 18px; color: var(--muted); }
+  .trade li { margin: 4px 0; }
+  .trade.text-only { background: var(--slate); color: #fff; }
+  .trade.text-only ul { color: #c9d5df; }
+  .trade.text-only .big { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: clamp(3rem, 2rem + 4vw, 5rem); line-height: .9; color: var(--leaf); }
+  .credit-line { margin-top: 12px; font-size: 13px; color: var(--muted); }
 
-  /* Rénovation : les étapes */
-  .reno { background: var(--surface); }
-  .steps { list-style: none; padding: 0; display: grid; gap: 0; margin-top: 48px; counter-reset: s; }
-  .steps li { counter-increment: s; display: grid; grid-template-columns: 72px 1fr; gap: 16px; padding: 22px 0; border-top: 2px solid #cdd5cc; }
-  .steps li::before { content: counter(s, decimal-leading-zero); font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 2.5rem; line-height: 1; color: var(--green-2); }
-  .steps b { display: block; font-size: var(--step-lead); line-height: 1.2; }
+  /* Rénovation */
+  .reno { background: var(--paper); }
+  .steps { list-style: none; padding: 0; margin-top: 44px; display: grid; gap: 12px; counter-reset: s; }
+  .steps li { counter-increment: s; position: relative; background: #fff; border-radius: 18px; padding: 22px 22px 22px 78px; }
+  .steps li::before { content: counter(s); position: absolute; left: 22px; top: 20px; width: 40px; height: 40px; border-radius: 12px; background: var(--leaf-pale); color: var(--leaf-2); display: grid; place-items: center; font: 800 1.2rem "Bricolage Grotesque", sans-serif; }
+  .steps b { display: block; font-size: 1.15rem; }
   .steps span { color: var(--muted); }
-  .reno .btn { margin-top: 36px; }
 
   /* Qui suis-je */
-  .moi { display: grid; gap: 40px; }
-  .moi figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 24px; }
-  .moi figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); }
-  .moi .quote { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem); line-height: 1.1; letter-spacing: -0.03em; margin: 28px 0; }
-  .moi .quote span { background: linear-gradient(transparent 62%, var(--mustard) 62%); }
-  .moi p { margin-bottom: 16px; max-width: 58ch; }
-  .moi .sign { font-weight: 600; }
-  .moi .sign small { display: block; font-weight: 400; color: var(--muted); font-size: var(--step-small); }
+  .moi-grid { display: grid; gap: 32px; align-items: center; }
+  .card-id { border-radius: 22px; background: var(--slate); color: #fff; padding: 28px; }
+  .card-id .row { display: flex; align-items: center; gap: 16px; }
+  .card-id img { width: 76px; border-radius: 12px; background: #fff; }
+  .card-id b { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.6rem; letter-spacing: -0.02em; display: block; line-height: 1.05; }
+  .card-id small { color: #b9c7d4; font-size: 15px; }
+  .card-id dl { margin-top: 22px; display: grid; gap: 10px; }
+  .card-id dt { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: #8fa3b5; }
+  .card-id dd { margin: 2px 0 0; font-weight: 600; }
+  .moi blockquote { font-family: "Bricolage Grotesque", sans-serif; font-weight: 600; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem); line-height: 1.1; letter-spacing: -0.03em; margin: 22px 0; }
+  .moi blockquote span { background: linear-gradient(transparent 60%, var(--leaf-pale) 60%); }
+  .moi p { margin-bottom: 14px; max-width: 60ch; }
 
-  /* Engagements */
-  .eng { background: var(--green); color: var(--on-green); }
-  .eng-grid { display: grid; gap: 36px; margin-top: 48px; }
-  .eng-grid div { border-top: 6px solid var(--mustard); padding-top: 22px; }
-  .eng-grid h3 { font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.75rem); }
-  .eng-grid p { margin-top: 14px; color: #d6e2da; max-width: 34ch; }
+  /* Zone */
+  .zone { background: var(--slate); color: #fff; }
+  .zone-grid { display: grid; gap: 32px; align-items: center; }
+  .zone .intro { color: #c9d5df; }
+  .zone .kicker { color: #a6d17f; }
+  .towns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; list-style: none; padding: 0; }
+  .towns li { padding: 8px 14px; border-radius: 999px; background: var(--slate-2); font-weight: 600; font-size: 15px; }
+  .towns li.main { background: var(--leaf); }
+  .zone figure img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 20px; }
+  .zone figcaption { margin-top: 8px; font-size: 13px; color: #a7b7c5; }
+
+  /* Questions */
+  .faq { display: grid; gap: 10px; margin-top: 40px; }
+  .faq details { border-radius: 16px; background: var(--paper); }
+  .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 16px; align-items: center; min-height: 64px; padding: 0 22px; font-weight: 700; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font: 800 1.6rem "Bricolage Grotesque", sans-serif; color: var(--leaf-2); transition: transform .2s var(--ease); }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq p { padding: 0 22px 20px; color: var(--muted); max-width: 70ch; }
 
   /* Devis */
-  .devis-grid { display: grid; gap: 36px; }
-  .devis form { display: grid; gap: 12px; }
-  .devis input, .devis textarea { width: 100%; min-height: 56px; padding: 14px 18px; border: 2px solid #cdd5cc; border-radius: 14px; background: #fff; color: var(--ink); font: 400 var(--step-body)/1.3 Figtree, sans-serif; }
-  .devis input:focus, .devis textarea:focus { border-color: var(--green-2); outline: none; }
-  .devis textarea { min-height: 130px; resize: vertical; }
+  .devis { background: var(--paper); }
+  .devis-grid { display: grid; gap: 32px; }
+  .devis form { display: grid; gap: 10px; background: #fff; border-radius: 22px; padding: 22px; }
+  .devis label { font-size: 14px; font-weight: 700; color: var(--muted); }
+  .devis input, .devis select, .devis textarea { width: 100%; min-height: 54px; padding: 13px 16px; border: 2px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink); font: 400 var(--step-body)/1.3 Figtree, sans-serif; }
+  .devis input:focus, .devis select:focus, .devis textarea:focus { border-color: var(--leaf); outline: none; }
+  .devis textarea { min-height: 110px; resize: vertical; }
   .devis .or { font-size: var(--step-small); color: var(--muted); }
-  .devis .or a { color: var(--ink); font-weight: 600; }
-  .devis figure img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 24px; }
-  .devis figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); }
+  .bigphone { display: inline-block; margin-top: 22px; font: 800 clamp(2rem, 1.5rem + 2.4vw, 3.4rem)/1 "Bricolage Grotesque", sans-serif; letter-spacing: -0.03em; color: var(--slate); text-decoration: none; }
+  .bigphone:hover { color: var(--leaf-2); }
 
-  footer { background: var(--ink); color: #fff; padding: 64px 0 120px; }
-  .foot { display: grid; gap: 32px; }
-  .foot .big { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: clamp(2rem, 1.4rem + 2.4vw, 3.5rem); letter-spacing: -0.035em; line-height: 1; }
-  .foot .big a { text-decoration: none; color: var(--mustard); }
-  .foot p { color: #c9d3cc; max-width: 40ch; margin-top: 14px; }
-  .imprint { font-size: var(--step-small); color: #9fb0a5; border-top: 1px solid #2c4436; padding-top: 22px; }
-  .imprint a { color: #c9d3cc; }
+  footer { background: var(--ink); color: #aab6c1; padding: 40px 0 120px; font-size: 14px; }
+  footer strong { color: #fff; font-family: "Bricolage Grotesque", sans-serif; font-size: 1.2rem; }
+  footer a { color: #e3e9ee; }
+  .foot { display: grid; gap: 16px; }
 
-  .callbar { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: var(--green); transition: transform .3s var(--ease); }
+  .callbar { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); box-shadow: 0 -1px 0 var(--line); backdrop-filter: blur(8px); transition: transform .3s var(--ease); }
   .callbar.away { transform: translateY(110%); }
-  .callbar .btn { flex: 1; }
-  .callbar .btn.ghost { flex: 0 0 auto; color: #fff; }
+  .callbar .btn { flex: 1; min-height: 52px; }
+  .callbar .btn.ghost { flex: 0 0 auto; }
 
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
   .reveal.in, .no-js .reveal { opacity: 1; transform: none; }
 
   @media (min-width: 760px) {
     .links { display: flex; }
-    .tiles { grid-template-columns: repeat(3, 1fr); }
-    .steps { grid-template-columns: repeat(5, 1fr); gap: 20px; }
-    .steps li { grid-template-columns: 1fr; border-top-width: 4px; }
-    .eng-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .trades { grid-template-columns: repeat(3, 1fr); }
+    .steps { grid-template-columns: repeat(3, 1fr); }
+    .towns li { font-size: 16px; }
   }
-  @media (min-width: 1100px) {
+  @media (min-width: 1080px) {
     .callbar { display: none; }
     body { padding-bottom: 0; }
-    footer { padding-bottom: 64px; }
-    .hero { grid-template-columns: 7fr 5fr; min-height: 88svh; }
-    .hero-photo { order: 2; min-height: 0; }
-    .hero-text { padding: 32px var(--margin) 64px; justify-content: space-between; }
-    .hero h1 { margin-top: 0; }
-    .soucis-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; }
-    .tiles { margin-top: 0; }
-    .moi { grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-    .devis-grid { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .foot { grid-template-columns: 1fr 1fr; }
-    .imprint { grid-column: 1 / -1; }
+    footer { padding-bottom: 40px; }
+    .hero { padding: 36px 0 96px; background: linear-gradient(90deg, var(--bg) 0, var(--bg) 52%, var(--paper) 52%); }
+    .hero-grid { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .moi-grid { grid-template-columns: 5fr 7fr; gap: 72px; }
+    .zone-grid { grid-template-columns: 1fr 1fr; gap: 72px; }
+    .devis-grid { grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+    .foot { grid-template-columns: 1fr 2fr; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -172,103 +211,147 @@
 </head>
 <body class="no-js">
 
-<div class="demo">Maquette de démonstration proposée par Guillaume Lamy, développeur web à Dijon. Ce n'est pas le site officiel.</div>
+<div class="demo">Maquette proposée par Guillaume Lamy, développeur web à Dijon. Ce n'est pas encore le site officiel.</div>
+
+<header>
+  <nav class="top" aria-label="Navigation principale">
+    <a class="brand" href="#"><img src="assets/logo-nouvel-artisan.jpg" width="172" height="137" alt="Logo Le Nouvel Artisan"><span><b>Le Nouvel Artisan</b><small>Thomas Boudiguet · Dijon</small></span></a>
+    <div class="links">
+      <a href="#maison">Dépannage</a>
+      <a href="#renovation">Rénovation</a>
+      <a href="#moi">Qui suis-je</a>
+      <a href="#questions">Questions</a>
+      <a href="#devis">Devis</a>
+    </div>
+    <a class="btn" href="tel:+33782597540" aria-label="Appeler le 07 82 59 75 40">Appeler</a>
+  </nav>
+</header>
 
 <main>
-  <header class="hero">
-    <div class="hero-photo">
-      <img src="assets/dijon-place-liberation.jpg" width="1600" height="900" alt="La place de la Libération, à Dijon, en fin d'après-midi">
-      <span class="tag">Dijon et alentours</span>
-    </div>
-    <div class="hero-text">
-      <nav class="topbar" aria-label="Navigation principale">
-        <a class="mark" href="#">Le Nouvel Artisan<b>.</b></a>
-        <div class="links">
-          <a href="#soucis">Dépannage</a>
-          <a href="#renovation">Rénovation</a>
-          <a href="#moi">Qui suis-je</a>
-          <a href="#devis">Devis</a>
-        </div>
-      </nav>
+  <section class="hero" id="maison" style="padding-top:18px">
+    <div class="wrap hero-grid">
       <div>
-        <h1>Une fuite&nbsp;?<br>Une panne&nbsp;?<br><em>J'arrive.</em></h1>
-        <p class="lead">Thomas Boudiguet, artisan à Dijon. Plomberie, électricité et rénovation, souvent le jour même ou le lendemain.</p>
+        <div class="eyebrow-row"><span class="pill"><span class="dot"></span>Urgences prioritaires</span><span class="pill">Devis gratuit</span></div>
+        <h1>Un souci dans la maison&nbsp;? <em>Un seul numéro.</em></h1>
+        <p class="lead">Plomberie, électricité, salle de bain : Thomas Boudiguet intervient à Dijon et alentours, souvent le jour même ou le lendemain.</p>
         <div class="acts">
-          <a class="btn" href="tel:+33782597540">Appeler le 07 82 59 75 40</a>
+          <a class="btn" href="tel:+33782597540"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>07 82 59 75 40</a>
           <a class="btn ghost" href="#devis">Demander un devis</a>
         </div>
-        <ul aria-label="En bref"><li>Devis gratuit</li><li>Un seul artisan</li><li>Urgences prioritaires</li></ul>
+        <p class="note">Ou touchez la pièce concernée sur le plan : votre SMS se prépare tout seul.</p>
+      </div>
+
+      <div class="house reveal">
+        <div class="house-h"><b>Où est le problème&nbsp;?</b><span>Touchez une pièce</span></div>
+        <svg class="plan" viewBox="0 0 400 300" role="group" aria-label="Plan de la maison, choisissez une pièce">
+          <g class="room" data-room="sejour" role="button" tabindex="0" aria-pressed="false"><rect x="8" y="8" width="222" height="150" rx="6"/><text x="24" y="40">Séjour</text><text class="sub" x="24" y="58">prises, éclairage</text></g>
+          <g class="room" data-room="cuisine" role="button" tabindex="0" aria-pressed="false"><rect x="230" y="8" width="162" height="112" rx="6"/><text x="246" y="40">Cuisine</text><text class="sub" x="246" y="58">évier, robinet</text></g>
+          <g class="room" data-room="sdb" role="button" tabindex="0" aria-pressed="true"><rect x="230" y="120" width="100" height="92" rx="6"/><text x="242" y="150">Salle</text><text x="242" y="168">de bain</text></g>
+          <g class="room" data-room="wc" role="button" tabindex="0" aria-pressed="false"><rect x="330" y="120" width="62" height="92" rx="6"/><text x="346" y="160">WC</text></g>
+          <g class="room" data-room="entree" role="button" tabindex="0" aria-pressed="false"><rect x="8" y="158" width="122" height="134" rx="6"/><text x="24" y="190">Entrée</text><text class="sub" x="24" y="208">tableau électrique</text></g>
+          <g class="room" data-room="cellier" role="button" tabindex="0" aria-pressed="false"><rect x="130" y="158" width="100" height="134" rx="6"/><text x="144" y="190">Cellier</text><text class="sub" x="144" y="208">chauffe-eau</text></g>
+          <g class="room" data-room="chambre" role="button" tabindex="0" aria-pressed="false"><rect x="230" y="212" width="162" height="80" rx="6"/><text x="246" y="244">Chambre</text><text class="sub" x="246" y="262">cloison, prises</text></g>
+          <line class="door" x1="90" y1="292" x2="120" y2="292"/>
+        </svg>
+        <div class="answer" aria-live="polite">
+          <p class="q" id="room-q">Salle de bain</p>
+          <h3 id="room-t">Qu'est-ce qui ne va pas&nbsp;?</h3>
+          <div class="chips" id="chips"></div>
+          <div class="acts">
+            <a class="btn" id="sms" href="sms:+33782597540">Envoyer le SMS</a>
+            <a class="btn ghost" href="tel:+33782597540">Appeler</a>
+          </div>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <section id="soucis">
-    <div class="wrap soucis-grid">
-      <div class="reveal">
-        <h2>Qu'est-ce qui ne va pas&nbsp;?</h2>
-        <p class="kicker-lead">Touchez votre souci : vous voyez ce que je fais, et un SMS se prépare tout seul.</p>
+  <section id="metiers">
+    <div class="wrap">
+      <span class="kicker reveal">Un seul artisan</span>
+      <h2 class="reveal">Trois métiers,<br>un seul interlocuteur.</h2>
+      <p class="intro reveal">Moins d'attente entre deux corps de métier, moins d'erreurs de coordination, et un devis global plus clair.</p>
+      <div class="trades">
+        <article class="trade reveal">
+          <img src="assets/salle-de-bain.jpg" width="1400" height="1050" loading="lazy" alt="Lavabo et crédence carrelée dans une salle de bain">
+          <div class="body"><h3>Plomberie</h3><ul><li>Recherche et réparation de fuites</li><li>Chauffe-eau, WC, robinetterie</li><li>Plomberie encastrée</li></ul></div>
+        </article>
+        <article class="trade reveal">
+          <img src="assets/tableau-electrique.jpg" width="1400" height="830" loading="lazy" alt="Tableau électrique avec disjoncteurs">
+          <div class="body"><h3>Électricité</h3><ul><li>Prise qui grille, disjoncteur qui saute</li><li>Tableau, prises, éclairage</li><li>Mise aux normes NF C 15-100</li></ul></div>
+        </article>
+        <article class="trade text-only reveal">
+          <div class="body"><p class="big">A→Z</p><h3>Rénovation</h3><ul><li>Salle de bain et cuisine complètes</li><li>Pose de cloisons</li><li>Carrelage, finitions, nettoyage du chantier</li></ul></div>
+        </article>
       </div>
-      <div class="reveal">
-        <div class="tiles" role="group" aria-label="Choisissez votre souci">
-          <button class="tile" aria-pressed="true" data-k="fuite"><span class="n">01</span>Fuite d'eau</button>
-          <button class="tile" aria-pressed="false" data-k="elec"><span class="n">02</span>Panne électrique</button>
-          <button class="tile" aria-pressed="false" data-k="eau"><span class="n">03</span>Plus d'eau chaude</button>
-          <button class="tile" aria-pressed="false" data-k="wc"><span class="n">04</span>WC qui fuit ou bouché</button>
-          <button class="tile" aria-pressed="false" data-k="prises"><span class="n">05</span>Prises, éclairage</button>
-          <button class="tile" aria-pressed="false" data-k="reno"><span class="n">06</span>Salle de bain, cuisine</button>
-        </div>
-        <div class="answer" aria-live="polite">
-          <div data-for="fuite" data-souci="une fuite d'eau"><h3>Fuite d'eau</h3><ul><li>Recherche et réparation de la fuite</li><li>Robinetterie, joints, flexibles</li><li>Intervention rapide, même en soirée si c'est urgent</li></ul></div>
-          <div data-for="elec" data-souci="une panne électrique" hidden><h3>Panne électrique</h3><ul><li>Prise qui grille, disjoncteur qui saute</li><li>Recherche de la panne sur le tableau</li><li>Remise en service en sécurité</li></ul></div>
-          <div data-for="eau" data-souci="un chauffe-eau en panne" hidden><h3>Plus d'eau chaude</h3><ul><li>Diagnostic du chauffe-eau</li><li>Réparation ou remplacement</li></ul></div>
-          <div data-for="wc" data-souci="des WC qui fuient ou bouchés" hidden><h3>WC qui fuit ou bouché</h3><ul><li>Réparation du mécanisme et des joints</li><li>Débouchage</li><li>Remplacement complet si besoin</li></ul></div>
-          <div data-for="prises" data-souci="des prises ou un éclairage à installer" hidden><h3>Prises, éclairage, mise aux normes</h3><ul><li>Ajout de prises et de points lumineux</li><li>Remplacement du tableau électrique</li><li>Mise aux normes NF C 15-100</li></ul></div>
-          <div data-for="reno" data-souci="un projet de rénovation (salle de bain ou cuisine)" hidden><h3>Salle de bain, cuisine, cloisons</h3><ul><li>Rénovation complète de salle de bain et de cuisine</li><li>Pose de cloisons pour réaménager une pièce</li><li>Plomberie, électricité et finitions par le même artisan</li></ul></div>
-          <div class="acts"><a class="btn dark" id="sms" href="sms:+33782597540">M'envoyer un SMS</a><a class="btn ghost" href="tel:+33782597540">Appeler</a></div>
-        </div>
-        <p class="autre">Pas dans la liste&nbsp;? Appelez-moi au <a href="tel:+33782597540">07 82 59 75 40</a>, on en parle.</p>
-      </div>
+      <p class="credit-line">Photos d'illustration.</p>
     </div>
   </section>
 
   <section class="reno" id="renovation">
     <div class="wrap">
-      <h2 class="reveal">Une rénovation,<br>un seul artisan.</h2>
-      <p class="kicker-lead reveal">Salle de bain ou cuisine : pas d'attente entre deux équipes, et un devis global plus clair.</p>
+      <span class="kicker reveal">Salle de bain ou cuisine</span>
+      <h2 class="reveal">Une rénovation,<br>étape par étape.</h2>
       <ol class="steps reveal">
-        <li><div><b>Visite et devis</b><span>Détaillé, gratuit, sans engagement.</span></div></li>
-        <li><div><b>Démontage</b><span>De l'existant, proprement.</span></div></li>
-        <li><div><b>Plomberie</b><span>Encastrée, aux bonnes cotes.</span></div></li>
-        <li><div><b>Électricité</b><span>Adaptée, aux normes NF C 15-100.</span></div></li>
-        <li><div><b>Finitions</b><span>Carrelage, joints, nettoyage du chantier.</span></div></li>
+        <li><b>Visite et devis détaillé</b><span>Gratuit et sans engagement, expliqué avant de commencer.</span></li>
+        <li><b>Démontage de l'existant</b><span>Proprement, en protégeant le reste de la maison.</span></li>
+        <li><b>Plomberie encastrée</b><span>Arrivées et évacuations aux bons endroits.</span></li>
+        <li><b>Électricité adaptée</b><span>Aux normes NF C 15-100, prises et éclairage compris.</span></li>
+        <li><b>Carrelage et finitions</b><span>Les joints, les détails, ce qui se voit tous les jours.</span></li>
+        <li><b>Nettoyage et suivi</b><span>Chantier propre, et je reste disponible après les travaux.</span></li>
       </ol>
-      <a class="btn dark reveal" href="sms:+33782597540?&body=Bonjour%2C%20j'ai%20un%20projet%20de%20r%C3%A9novation.%20Pouvez-vous%20me%20rappeler%20%3F">Parler de mon projet</a>
+      <div style="margin-top:32px" class="reveal"><a class="btn dark" href="sms:+33782597540?&body=Bonjour%2C%20j'ai%20un%20projet%20de%20r%C3%A9novation.%20Pouvez-vous%20me%20rappeler%20%3F">Parler de mon projet</a></div>
     </div>
   </section>
 
-  <section id="moi">
-    <div class="wrap moi">
-      <figure class="reveal">
-        <img src="assets/toits-dijonnais.jpg" width="1600" height="757" loading="lazy" alt="Les toits de Dijon vus depuis la cathédrale Saint-Bénigne">
-        <figcaption>Dijon, vue depuis la cathédrale Saint-Bénigne.</figcaption>
-      </figure>
+  <section class="moi" id="moi">
+    <div class="wrap moi-grid">
+      <div class="card-id reveal">
+        <div class="row"><img src="assets/logo-nouvel-artisan.jpg" width="172" height="137" alt=""><span><b>Thomas Boudiguet</b><small>Le Nouvel Artisan, Dijon</small></span></div>
+        <dl>
+          <div><dt>Formation</dt><dd>Maintenance des bâtiments, centre La Taloche</dd></div>
+          <div><dt>Métiers</dt><dd>Plomberie, électricité, rénovation intérieure</dd></div>
+          <div><dt>Zone</dt><dd>Dijon et alentours</dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33782597540">07 82 59 75 40</a></dd></div>
+        </dl>
+      </div>
       <div class="reveal">
-        <h2>Qui suis-je&nbsp;?</h2>
-        <p class="quote"><span>Je traite chaque chantier comme si c'était ma propre maison.</span></p>
-        <p>Je m'appelle Thomas Boudiguet. Je suis diplômé en maintenance des bâtiments du centre de formation La Taloche, et j'interviens de la simple fuite jusqu'à la rénovation complète de votre salle de bain.</p>
-        <p>Artisan fraîchement installé, j'y mets toute ma motivation. Quand vous m'appelez, c'est moi qui réponds et c'est moi qui viens, et je reste disponible après les travaux.</p>
-        <p class="sign">Thomas Boudiguet<small>Le Nouvel Artisan, Dijon</small></p>
+        <span class="kicker">Qui suis-je</span>
+        <h2>Un artisan, pas un standard.</h2>
+        <blockquote><span>« Je traite chaque chantier comme si c'était ma propre maison. »</span></blockquote>
+        <p>Fraîchement installé à mon compte, j'y mets toute ma motivation. Quand vous m'appelez, c'est moi qui réponds et c'est moi qui viens : pas d'intermédiaire, pas de frais de structure, des prix justes.</p>
+        <p>De la simple fuite à la rénovation complète de votre salle de bain, je reste votre seul interlocuteur, et je reste joignable après les travaux.</p>
       </div>
     </div>
   </section>
 
-  <section class="eng" id="engagements">
+  <section class="zone" id="zone">
+    <div class="wrap zone-grid">
+      <div class="reveal">
+        <span class="kicker">Zone d'intervention</span>
+        <h2>Dijon et alentours.</h2>
+        <p class="intro">J'interviens dans toute l'agglomération dijonnaise. Votre commune n'est pas dans la liste&nbsp;? Appelez, on en parle.</p>
+        <ul class="towns" aria-label="Communes">
+          <li class="main">Dijon</li><li>Chenôve</li><li>Talant</li><li>Fontaine-lès-Dijon</li><li>Longvic</li><li>Quetigny</li><li>Chevigny-Saint-Sauveur</li><li>Saint-Apollinaire</li><li>Marsannay-la-Côte</li><li>Plombières-lès-Dijon</li>
+        </ul>
+      </div>
+      <figure class="reveal">
+        <img src="assets/toits-dijonnais.jpg" width="1600" height="757" loading="lazy" alt="Les toits de Dijon vus depuis la cathédrale Saint-Bénigne">
+        <figcaption>Dijon, vue depuis la cathédrale Saint-Bénigne.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="questions">
     <div class="wrap">
-      <h2 class="reveal">Mes engagements</h2>
-      <div class="eng-grid reveal">
-        <div><h3>Rapide</h3><p>Une fuite à 19 h, une prise qui grille en pleine cuisson : je priorise les urgences, souvent le jour même ou le lendemain.</p></div>
-        <div><h3>Clair</h3><p>Pas d'intermédiaire ni de gros frais de structure. Un devis détaillé, expliqué avant chaque intervention.</p></div>
-        <div><h3>Soigné</h3><p>Des matériaux de qualité, les normes respectées, et un chantier propre quand je pars.</p></div>
+      <span class="kicker reveal">Questions fréquentes</span>
+      <h2 class="reveal">Avant de m'appeler.</h2>
+      <div class="faq reveal">
+        <details open><summary>Le devis est-il payant&nbsp;?</summary><p>Non. Le devis est détaillé, gratuit et sans engagement, et je vous l'explique avant toute intervention : vous savez exactement où va votre argent.</p></details>
+        <details><summary>En combien de temps pouvez-vous venir&nbsp;?</summary><p>Je priorise les dépannages urgents : souvent le jour même ou le lendemain. Pour une rénovation, on fixe ensemble une date après la visite.</p></details>
+        <details><summary>Une fuite le soir ou une panne le week-end&nbsp;?</summary><p>Appelez ou envoyez un SMS avec votre adresse et, si possible, une photo du problème. Je vous réponds au plus vite et je vous dis si je peux passer.</p></details>
+        <details><summary>Faites-vous à la fois la plomberie et l'électricité&nbsp;?</summary><p>Oui, et la rénovation complète. Pour une salle de bain ou une cuisine, vous n'avez qu'un seul artisan du début à la fin.</p></details>
+        <details><summary>Et après les travaux&nbsp;?</summary><p>Je reste disponible pour toute question ou ajustement. Vous avez mon numéro direct.</p></details>
       </div>
     </div>
   </section>
@@ -276,68 +359,85 @@
   <section class="devis" id="devis">
     <div class="wrap devis-grid">
       <div class="reveal">
-        <h2>Demander un devis</h2>
-        <p class="kicker-lead">Deux lignes suffisent. Votre demande part par SMS, et je vous rappelle pour fixer un passage.</p>
-        <form id="form" style="margin-top:28px">
-          <label class="sr" for="nom">Votre nom</label><input id="nom" name="nom" placeholder="Votre nom" autocomplete="name" required>
-          <label class="sr" for="ville">Votre commune</label><input id="ville" name="ville" placeholder="Votre commune" autocomplete="address-level2">
-          <label class="sr" for="besoin">Votre besoin</label><textarea id="besoin" name="besoin" placeholder="Votre besoin (fuite, panne, salle de bain…)" required></textarea>
-          <button class="btn dark" type="submit">Envoyer ma demande par SMS</button>
-          <p class="or">Plus rapide : <a href="tel:+33782597540">appelez le 07 82 59 75 40</a></p>
-        </form>
+        <span class="kicker">Devis gratuit</span>
+        <h2>Décrivez votre besoin.</h2>
+        <p class="intro">Deux lignes suffisent. Votre demande part par SMS, et je vous rappelle pour fixer un passage.</p>
+        <a class="bigphone" href="tel:+33782597540">07 82 59 75 40</a>
       </div>
-      <figure class="reveal">
-        <img src="assets/dijon-place-liberation.jpg" width="1600" height="900" loading="lazy" alt="La place de la Libération et le palais des Ducs, à Dijon" style="object-position: 80% 50%">
-        <figcaption>J'interviens à Dijon et dans les communes alentour.</figcaption>
-      </figure>
+      <form id="form" class="reveal">
+        <label for="nom">Votre nom</label><input id="nom" name="nom" autocomplete="name" required>
+        <label for="ville">Votre commune</label><input id="ville" name="ville" autocomplete="address-level2" placeholder="Dijon, Chenôve, Talant…">
+        <label for="type">Type de besoin</label>
+        <select id="type" name="type"><option>Dépannage plomberie</option><option>Dépannage électricité</option><option>Rénovation de salle de bain</option><option>Rénovation de cuisine</option><option>Autre travaux</option></select>
+        <label for="besoin">Votre besoin</label><textarea id="besoin" name="besoin" placeholder="Ex. : fuite sous l'évier depuis ce matin" required></textarea>
+        <button class="btn" type="submit">Envoyer ma demande par SMS</button>
+        <p class="or">Votre téléphone ouvre un SMS déjà rédigé : il ne reste qu'à l'envoyer.</p>
+      </form>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap foot">
-    <div>
-      <p class="big">Le Nouvel Artisan<br><a href="tel:+33782597540">07 82 59 75 40</a></p>
-      <p>Thomas Boudiguet. Dépannage, plomberie, électricité et rénovation intérieure, à Dijon et alentours.</p>
-    </div>
-    <div>
-      <p><a href="sms:+33782597540">Envoyer un SMS</a></p>
-      <p>Dijon et alentours (21)</p>
-    </div>
-    <p class="imprint">Maquette non officielle réalisée par Guillaume Lamy. Photos : <a href="https://commons.wikimedia.org/wiki/File:Dijon_-_Place_de_la_Lib%C3%A9ration_-_2.jpg">« Dijon - Place de la Libération - 2 »</a> par Benjamin Smith, CC BY-SA 4.0 ; <a href="https://commons.wikimedia.org/wiki/File:Toits-dijonnais.jpg">« Toits-dijonnais »</a> par Twibo2, CC BY-SA 4.0 ; via Wikimedia Commons.</p>
+    <div><strong>Le Nouvel Artisan</strong><br>Thomas Boudiguet · Dijon et alentours<br><a href="tel:+33782597540">07 82 59 75 40</a></div>
+    <div>Maquette non officielle réalisée par Guillaume Lamy. Photos d'illustration : <a href="https://commons.wikimedia.org/wiki/File:Bathroom_splash_back.jpg">« Bathroom splash back »</a> par Smtzzz, CC BY-SA 4.0 ; <a href="https://commons.wikimedia.org/wiki/File:Single_phase_electrical_panel_for_apartment.JPG">« Single phase electrical panel for apartment »</a> par Dmitry G, CC BY-SA 3.0 ; <a href="https://commons.wikimedia.org/wiki/File:Toits-dijonnais.jpg">« Toits-dijonnais »</a> par Twibo2, CC BY-SA 4.0 ; via Wikimedia Commons.</div>
   </div>
 </footer>
 
 <div class="callbar">
-  <a class="btn" href="tel:+33782597540">Appeler maintenant</a>
-  <a class="btn ghost" href="sms:+33782597540">SMS</a>
+  <a class="btn" href="tel:+33782597540">Appeler Thomas</a>
+  <a class="btn ghost" href="#maison">SMS</a>
 </div>
 
 <script>
   document.body.classList.remove('no-js');
   const tel = '+33782597540';
   const smsLink = body => 'sms:' + tel + '?&body=' + encodeURIComponent(body);
-  const sms = document.getElementById('sms');
 
-  // Chaque tuile affiche sa réponse et prépare son SMS.
-  const pick = k => {
-    document.querySelectorAll('.tile').forEach(t => t.setAttribute('aria-pressed', t.dataset.k === k));
-    document.querySelectorAll('[data-for]').forEach(p => {
-      p.hidden = p.dataset.for !== k;
-      if (!p.hidden) sms.href = smsLink("Bonjour, j'ai " + p.dataset.souci + '. Pouvez-vous me rappeler ? Je suis à : ');
-    });
+  // Le plan de la maison : chaque pièce a ses soucis, chaque souci prépare son SMS.
+  const rooms = {
+    sejour:  { name: 'Séjour', items: ['Une prise qui ne marche plus', 'Un éclairage à installer', 'Des prises à ajouter'] },
+    cuisine: { name: 'Cuisine', items: ["Une fuite sous l'évier", 'Un robinet ou un mitigeur à changer', 'Une prise qui grille', 'Une cuisine à rénover'] },
+    sdb:     { name: 'Salle de bain', items: ['Une fuite', 'La douche ou la baignoire qui fuit', 'Une salle de bain à rénover'] },
+    wc:      { name: 'WC', items: ['Des WC qui fuient', 'Des WC bouchés', 'Des WC à remplacer'] },
+    entree:  { name: 'Entrée', items: ['Un disjoncteur qui saute', "Plus de courant dans une partie de la maison", 'Un tableau électrique à mettre aux normes'] },
+    cellier: { name: 'Cellier', items: ["Plus d'eau chaude", 'Un chauffe-eau qui fuit', 'Un chauffe-eau à remplacer'] },
+    chambre: { name: 'Chambre', items: ['Une cloison à poser', 'Des prises à ajouter', 'Un éclairage qui ne marche plus'] }
   };
-  document.querySelectorAll('.tile').forEach(t => t.addEventListener('click', () => pick(t.dataset.k)));
-  pick('fuite');
+  const chips = document.getElementById('chips'), sms = document.getElementById('sms');
+  let current = 'sdb', item = 0;
+  const update = () => {
+    const r = rooms[current];
+    sms.href = smsLink(`Bonjour, ${r.items[item].charAt(0).toLowerCase() + r.items[item].slice(1)} (${r.name.toLowerCase()}). Pouvez-vous me rappeler ? Je suis à : `);
+    chips.querySelectorAll('.chip').forEach((c, i) => c.setAttribute('aria-pressed', i === item));
+  };
+  const pick = key => {
+    current = key; item = 0;
+    document.querySelectorAll('.room').forEach(g => g.setAttribute('aria-pressed', g.dataset.room === key));
+    document.getElementById('room-q').textContent = rooms[key].name;
+    chips.innerHTML = '';
+    rooms[key].items.forEach((t, i) => {
+      const b = document.createElement('button');
+      b.className = 'chip'; b.type = 'button'; b.textContent = t;
+      b.addEventListener('click', () => { item = i; update(); });
+      chips.appendChild(b);
+    });
+    update();
+  };
+  document.querySelectorAll('.room').forEach(g => {
+    g.addEventListener('click', () => pick(g.dataset.room));
+    g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(g.dataset.room); } });
+  });
+  pick('sdb');
 
   // Le formulaire ouvre un SMS déjà rempli.
   document.getElementById('form').addEventListener('submit', e => {
     e.preventDefault();
     const f = new FormData(e.target);
-    location.href = smsLink(`Bonjour, je suis ${f.get('nom')} (${f.get('ville') || 'Dijon'}). ${f.get('besoin')}`);
+    location.href = smsLink(`Bonjour, je suis ${f.get('nom')} (${f.get('ville') || 'Dijon'}). ${f.get('type')} : ${f.get('besoin')}`);
   });
 
-  const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: .12 });
+  const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: .1 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   const bar = document.querySelector('.callbar');

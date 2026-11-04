@@ -46,5 +46,53 @@
    "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
   ],
   "saved": "2026-11-02T11:27:29.817Z"
+ },
+ {
+  "file": "assets/salle-de-bain.jpg",
+  "media": "image",
+  "ref": "commons:128510150",
+  "title": "Bathroom splash back",
+  "creator": "Smtzzz",
+  "creatorUrl": null,
+  "date": "2023-02-02",
+  "license": "CC BY-SA 4.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/wiki/File:Bathroom_splash_back.jpg",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Bathroom_splash_back.jpg/1920px-Bathroom_splash_back.jpg",
+  "width": 1920,
+  "height": 1440,
+  "bytes": 508996,
+  "credit": "\"Bathroom splash back\" by Smtzzz, CC BY-SA 4.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-11-04T08:54:11.328Z"
+ },
+ {
+  "file": "assets/tableau-electrique.jpg",
+  "media": "image",
+  "ref": "commons:124207655",
+  "title": "Single phase electrical panel for apartment",
+  "creator": "Dmitry G",
+  "creatorUrl": null,
+  "date": "2022-10-14",
+  "license": "CC BY-SA 3.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/wiki/File:Single_phase_electrical_panel_for_apartment.JPG",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Single_phase_electrical_panel_for_apartment.JPG/1920px-Single_phase_electrical_panel_for_apartment.JPG",
+  "width": 1920,
+  "height": 1139,
+  "bytes": 518937,
+  "credit": "\"Single phase electrical panel for apartment\" by Dmitry G, CC BY-SA 3.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-11-04T08:54:12.030Z"
  }
 ]
